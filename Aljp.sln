@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljp.Domain", "Aljp.Domain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljp.Infrastructure", "Aljp.Infrastructure\Aljp.Infrastructure.csproj", "{2123E181-22C5-4C16-A92C-9EE1E2C92E37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljp.Web", "Aljp.Web\Aljp.Web.csproj", "{0E8EB66D-0160-4498-AFD1-7CB6F9B22883}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2123E181-22C5-4C16-A92C-9EE1E2C92E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2123E181-22C5-4C16-A92C-9EE1E2C92E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2123E181-22C5-4C16-A92C-9EE1E2C92E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E8EB66D-0160-4498-AFD1-7CB6F9B22883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8EB66D-0160-4498-AFD1-7CB6F9B22883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8EB66D-0160-4498-AFD1-7CB6F9B22883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8EB66D-0160-4498-AFD1-7CB6F9B22883}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

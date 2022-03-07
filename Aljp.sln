@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljp.Domain", "Aljp.Domain\Aljp.Domain.csproj", "{944FE6CA-6670-4201-B98B-248F3AE2781D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljp.Infrastructure", "Aljp.Infrastructure\Aljp.Infrastructure.csproj", "{2123E181-22C5-4C16-A92C-9EE1E2C92E37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{944FE6CA-6670-4201-B98B-248F3AE2781D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{944FE6CA-6670-4201-B98B-248F3AE2781D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{944FE6CA-6670-4201-B98B-248F3AE2781D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2123E181-22C5-4C16-A92C-9EE1E2C92E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2123E181-22C5-4C16-A92C-9EE1E2C92E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2123E181-22C5-4C16-A92C-9EE1E2C92E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2123E181-22C5-4C16-A92C-9EE1E2C92E37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

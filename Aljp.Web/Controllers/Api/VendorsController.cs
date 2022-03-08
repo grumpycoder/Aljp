@@ -57,6 +57,7 @@ public class VendorsController : ControllerBase
     }
 
     [HttpPut]
+    [Route("", Name = "UpdateVendor")]
     public async Task<ActionResult> Put([FromBody] UpdateVendor command, CancellationToken token = new ())
     {
         var entity = await _context.Vendors.FindAsync(new object?[] { command.Id }, cancellationToken: token);

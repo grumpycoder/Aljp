@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Aljp.Infrastructure\Aljp.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>

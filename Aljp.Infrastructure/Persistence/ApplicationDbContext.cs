@@ -10,10 +10,10 @@ public class ApplicationDbContext : DbContext
     {
     }
 
-    public DbSet<Vendor>? Vendors { get; set; }
-    public DbSet<MiniBid>? MiniBids { get; set; }
-    public DbSet<Contact>? Contacts { get; set; }
-    public DbSet<Foo>? Foos { get; set; }
+    public DbSet<Vendor> Vendors { get; set; }
+    public DbSet<MiniBid> MiniBids { get; set; }
+    public DbSet<Contact> Contacts { get; set; }
+    public DbSet<Foo> Foos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

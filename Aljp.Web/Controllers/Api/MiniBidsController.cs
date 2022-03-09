@@ -38,7 +38,7 @@ public class MiniBidsController : ControllerBase
         var entity = new Domain.Entities.MiniBid(command.ProjectTitle, command.DistrictName, command.Description);
         entity.UpdateDueDate(command.DueDate);
 
-        _context.MiniBids.Add(entity);
+        await _context.MiniBids.AddAsync(entity, token);
         await _context.SaveChangesAsync(token);
 
         var response = new CreateMiniResponse
@@ -72,13 +72,13 @@ public class MiniBidsController : ControllerBase
     public record UpdateMiniBid(int Id, string ProjectTitle, string DistrictName, string Description, DateTime DueDate);
 
     public record CreateMiniBid(string ProjectTitle, string DistrictName, string Description, DateTime DueDate);
-}
 
-public class CreateMiniResponse
-{
-    public int Id { get; set; }
-    public string ProjectTitle { get; set; } = string.Empty;
-    public string DistrictName { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-    public DateTime? DueDate { get; set; }
+    private class CreateMiniResponse
+    {
+        public int Id { get; set; }
+        public string ProjectTitle { get; set; } = string.Empty;
+        public string DistrictName { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public DateTime? DueDate { get; set; }
+    }
 }

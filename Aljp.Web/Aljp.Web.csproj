@@ -10,4 +10,8 @@
       <ProjectReference Include="..\Aljp.Infrastructure\Aljp.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="DateOnlyTimeOnly.AspNet" Version="1.0.2" />
+    </ItemGroup>
+
 </Project>

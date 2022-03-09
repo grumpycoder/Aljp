@@ -77,15 +77,15 @@ public class ContactsController : ControllerBase
 
     public record CreateContact(string Firstname, string Lastname, string Title, string EmailAddress,
         string BusinessPhone, string MobilePhone);
-}
 
-public class CreateContactResponse
-{
-    public int Id { get; set; }
-    public string Firstname { get; set; } = string.Empty;
-    public string Lastname { get; set; } = string.Empty;
-    public string EmailAddress { get; set; } = string.Empty;
-    public string Title { get; set; } = string.Empty;
-    public string BusinessPhone { get; set; } = string.Empty;
-    public string MobilePhone { get; set; } = string.Empty;
+    private class CreateContactResponse
+    {
+        public int Id { get; set; }
+        public string Firstname { get; set; } = string.Empty;
+        public string Lastname { get; set; } = string.Empty;
+        public string EmailAddress { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty;
+        public string BusinessPhone { get; set; } = string.Empty;
+        public string MobilePhone { get; set; } = string.Empty;
+    }
 }

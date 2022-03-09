@@ -72,23 +72,24 @@ public class VendorsController : ControllerBase
 
         return Ok();
     }
+    
+    public record UpdateVendor(int Id, string CompanyName, string CompanyWebsiteUrl, string SpinNumber,
+        string PhoneNumber, string Street, string City, string State, string PostalCode);
+
+    public record CreateVendor(string CompanyName, string CompanyWebsiteUrl, string SpinNumber,
+        string PhoneNumber, string Street, string City, string State, string PostalCode);
+
+    private class CreateVendorResponse
+    {
+        public int Id { get; set; }
+        public string CompanyName { get; set; } = string.Empty;
+        public string CompanyWebsiteUrl { get; set; } = string.Empty;
+        public string SpinNumber { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
+        public string Street { get; set; } = string.Empty;
+        public string City { get; set; } = string.Empty;
+        public string State { get; set; } = string.Empty;
+        public string PostalCode { get; set; } = string.Empty;
+    }
 }
 
-public record UpdateVendor(int Id, string CompanyName, string CompanyWebsiteUrl, string SpinNumber,
-    string PhoneNumber, string Street, string City, string State, string PostalCode);
-
-public record CreateVendor(string CompanyName, string CompanyWebsiteUrl, string SpinNumber,
-    string PhoneNumber, string Street, string City, string State, string PostalCode);
-
-public class CreateVendorResponse
-{
-    public int Id { get; set; }
-    public string CompanyName { get; set; } = string.Empty;
-    public string CompanyWebsiteUrl { get; set; } = string.Empty;
-    public string SpinNumber { get; set; } = string.Empty;
-    public string PhoneNumber { get; set; } = string.Empty;
-    public string Street { get; set; } = string.Empty;
-    public string City { get; set; } = string.Empty;
-    public string State { get; set; } = string.Empty;
-    public string PostalCode { get; set; } = string.Empty;
-}

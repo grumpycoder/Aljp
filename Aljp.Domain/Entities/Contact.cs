@@ -10,7 +10,8 @@ public class Contact : DomainEntity
     public string Title { get; private set; } = string.Empty;
     public string BusinessPhone { get; private set; } = string.Empty;
     public string MobilePhone { get; private set; } = string.Empty;
-
+    public Vendor Vendor { get; private set; }
+    
     protected Contact()
     {
     }

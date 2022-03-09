@@ -27,7 +27,9 @@ public class VendorsController : ControllerBase
     [Route("{id:int}", Name = "GetVendorById")]
     public async Task<ActionResult> GetById([FromRoute] int id, CancellationToken token = new())
     {
-        var entity = await _context.Vendors.FindAsync(new object?[] { id }, cancellationToken: token);
+        var entity = await _context.Vendors
+            .Include(x => x.Contacts)
+            .FirstOrDefaultAsync(x => x.Id == id, cancellationToken: token);
         return Ok(entity);
     }
 

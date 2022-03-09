@@ -11,6 +11,7 @@ public class Contract : DomainEntity
     public DateOnly? IsoExpirationDate { get; private set; }
     public double? Discount { get; private set; }
     public string State470Number { get; private set; } = string.Empty;
+    public Vendor Vendor { get; private set; }
 
     protected Contract()
     {
@@ -19,16 +20,16 @@ public class Contract : DomainEntity
     public Contract(string stateContractId, DateOnly? awardDate, DateOnly? startDate, DateOnly? contractExpireDate,
         DateOnly? isoExpirationDate, double? discount, string state470Number)
     {
-        StateContractId = stateContractId; 
+        StateContractId = stateContractId;
         AwardDate = awardDate;
         StartDate = startDate;
         ContractExpireDate = contractExpireDate;
         IsoExpirationDate = isoExpirationDate;
         Discount = discount;
-        State470Number = state470Number; 
+        State470Number = state470Number;
     }
 
-    public void Update(string stateContractId, DateOnly? awardDate, DateOnly? startDate, 
+    public void Update(string stateContractId, DateOnly? awardDate, DateOnly? startDate,
         DateOnly? contractExpireDate, DateOnly? isoExpirationDate, double? discount, string state470Number)
     {
         StateContractId = stateContractId;
@@ -37,6 +38,6 @@ public class Contract : DomainEntity
         ContractExpireDate = contractExpireDate;
         IsoExpirationDate = isoExpirationDate;
         Discount = discount;
-        State470Number = state470Number; 
+        State470Number = state470Number;
     }
 }

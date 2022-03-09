@@ -12,6 +12,8 @@ public class Vendor : DomainEntity
     public string City { get; private set; } = string.Empty;
     public string State { get; private set; } = string.Empty;
     public string PostalCode { get; private set; } = string.Empty;
+    
+    public List<Contact> Contacts { get; private set; } = new(); 
 
     protected Vendor(){}
     

@@ -16,6 +16,7 @@ public class VendorsController : ControllerBase
     }
 
     [Route("")]
+    [HttpGet]
     public async Task<ActionResult> Get(CancellationToken token = new())
     {
         var list = await _context.Vendors.ToListAsync(cancellationToken: token);

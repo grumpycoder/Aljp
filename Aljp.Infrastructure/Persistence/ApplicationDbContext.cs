@@ -14,6 +14,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<MiniBid> MiniBids { get; set; }
     public DbSet<Contact> Contacts { get; set; }
     public DbSet<Contract> Contracts { get; set; }
+    public DbSet<ProductLine> ProductLines { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

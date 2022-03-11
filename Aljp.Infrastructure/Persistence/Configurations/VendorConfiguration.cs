@@ -11,8 +11,14 @@ public class VendorConfiguration: IEntityTypeConfiguration<Vendor>
         builder.ToTable("Vendors", schema: "Common");
         builder.Property(p => p.Id).HasColumnName("VendorId");
 
-        // builder.HasMany(p => p.ProductLines).WithMany("Vendors"); 
+        builder
+            .HasMany(v => v.ProductLines)
+            .WithMany("Vendors")
+            .UsingEntity(p => p.ToTable("VendorProductLines", "Common"));
         
+        
+        // builder.HasMany(p => p.ProductLines).WithMany("Vendors"); 
+
         // builder.HasMany(x => x.ProductLines)
         //     .WithMany("Vendors")
         //     .UsingEntity<VendorProductLine>(
@@ -23,7 +29,7 @@ public class VendorConfiguration: IEntityTypeConfiguration<Vendor>
         //         join.ToTable("VendorProductLines", "Common");
         //         join.HasKey(line => new { line.VendorId, line.ProductLineId });
         //     });
-        
+
         // builder.Navigation(v => v.Contacts).AutoInclude(); 
     }
 }

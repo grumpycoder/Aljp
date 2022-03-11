@@ -15,7 +15,7 @@ public class Vendor : DomainEntity
 
     public List<Contact> Contacts { get; private set; } = new();
 
-    public IEnumerable<VendorProductLine>? ProductLines { get; set; }
+    public IEnumerable<ProductLine>? ProductLines { get; set; }
     // public List<VendorProductLine> ProductLines { get; set; }
 
 

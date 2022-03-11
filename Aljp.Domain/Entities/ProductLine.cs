@@ -6,4 +6,6 @@ public class ProductLine
     public string Name { get; set; }
     public double Rating { get; set; }
     public string ProductLineUrl { get; set; }
+    
+    private ICollection<Vendor> Vendors { get; set; }
 }

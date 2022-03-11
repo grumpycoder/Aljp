@@ -5,22 +5,28 @@ namespace Aljp.Domain.Entities;
 public class Vendor : DomainEntity
 {
     public string CompanyName { get; private set; } = string.Empty;
-    public string CompanyWebsiteUrl { get; private  set; } = string.Empty; 
+    public string CompanyWebsiteUrl { get; private set; } = string.Empty;
     public string SpinNumber { get; private set; } = string.Empty;
     public string PhoneNumber { get; private set; } = string.Empty;
     public string Street { get; private set; } = string.Empty;
     public string City { get; private set; } = string.Empty;
     public string State { get; private set; } = string.Empty;
     public string PostalCode { get; private set; } = string.Empty;
-    
-    public List<Contact> Contacts { get; private set; } = new(); 
 
-    protected Vendor(){}
-    
+    public List<Contact> Contacts { get; private set; } = new();
+
+    public IEnumerable<VendorProductLine>? ProductLines { get; set; }
+    // public List<VendorProductLine> ProductLines { get; set; }
+
+
+    protected Vendor()
+    {
+    }
+
     public Vendor(string companyName, string spinNumber)
     {
         CompanyName = companyName;
-        SpinNumber = spinNumber; 
+        SpinNumber = spinNumber;
     }
 
 
@@ -29,18 +35,18 @@ public class Vendor : DomainEntity
         Street = street;
         City = city;
         State = state;
-        PostalCode = postalCode; 
+        PostalCode = postalCode;
     }
 
     public void UpdateCompany(string companyName, string companyWebsiteUrl, string spinNumber)
     {
         CompanyName = companyName;
-        CompanyWebsiteUrl = companyWebsiteUrl; 
-        SpinNumber = spinNumber; 
+        CompanyWebsiteUrl = companyWebsiteUrl;
+        SpinNumber = spinNumber;
     }
 
     public void UpdatePhone(string phoneNumber)
     {
-        PhoneNumber = phoneNumber; 
+        PhoneNumber = phoneNumber;
     }
 }

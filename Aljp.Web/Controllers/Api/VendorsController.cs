@@ -29,6 +29,8 @@ public class VendorsController : ControllerBase
     {
         var entity = await _context.Vendors
             .Include(x => x.Contacts)
+            .Include(x => x.ProductLines)
+            // .ThenInclude(p => p.ProductLine)
             .FirstOrDefaultAsync(x => x.Id == id, cancellationToken: token);
         return Ok(entity);
     }
@@ -61,7 +63,7 @@ public class VendorsController : ControllerBase
 
     [HttpPut]
     [Route("", Name = "UpdateVendor")]
-    public async Task<ActionResult> Put([FromBody] UpdateVendor command, CancellationToken token = new ())
+    public async Task<ActionResult> Put([FromBody] UpdateVendor command, CancellationToken token = new())
     {
         var entity = await _context.Vendors.FindAsync(new object?[] { command.Id }, cancellationToken: token);
 
@@ -75,7 +77,7 @@ public class VendorsController : ControllerBase
 
         return Ok();
     }
-    
+
     public record UpdateVendor(int Id, string CompanyName, string CompanyWebsiteUrl, string SpinNumber,
         string PhoneNumber, string Street, string City, string State, string PostalCode);
 
@@ -95,4 +97,3 @@ public class VendorsController : ControllerBase
         public string PostalCode { get; set; } = string.Empty;
     }
 }
-

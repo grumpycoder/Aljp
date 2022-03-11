@@ -19,5 +19,15 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        builder.Entity<VendorProductLine>()
+            .HasKey(bc => new { bc.VendorId, bc.ProductLineId });  
+        builder.Entity<VendorProductLine>()
+            .HasOne(bc => bc.Vendor)
+            .WithMany(b => b.ProductLines)
+            .HasForeignKey(bc => bc.VendorId);  
+        // builder.Entity<VendorProductLine>()
+        //     .HasOne(bc => bc.ProductLine)
+        //     .WithMany(c => c.Vendors)
+        //     .HasForeignKey(bc => bc.ProductLineId);
     }
 }

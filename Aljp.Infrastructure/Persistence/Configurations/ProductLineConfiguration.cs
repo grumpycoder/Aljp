@@ -11,5 +11,6 @@ public class ProductLineConfiguration : IEntityTypeConfiguration<ProductLine>
         builder.ToTable("ProductLines", schema: "Common");
         builder.Property(p => p.Id).HasColumnName("ProductLineId");
         builder.Property(p => p.Name).HasColumnName("ProductLineName");
+        
     }
 }
